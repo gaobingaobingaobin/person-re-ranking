@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+CAFFE=caffe
+DATASET=market
+NET=resnet50
+SNAPSHOTS_DIR=output/${DATASET}_train
+
+LOG="experiments/logs/${DATASET}_re-id_${NET}.txt.`date +'%Y-%m-%d_%H-%M-%S'`"
+
+cd $(dirname ${BASH_SOURCE[0]})/../../
+
+mkdir -p ${SNAPSHOTS_DIR}
+
+GLOG_logtostderr=1 ${CAFFE}/build/tools/caffe train \
+  -solver models/${DATASET}/${NET}/resnet_50_centerloss_solver.prototxt \
+  -weights resnet/ResNet-50-model.caffemodel  2>&1 | tee ${LOG}

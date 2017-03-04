@@ -1,0 +1,105 @@
+name: "Res50-base"
+
+
+
+#------------------- pyramid------
+layer {
+       name: "res5c_up"
+       type: "Deconvolution"
+       bottom: "res5c"
+       top: "res5c_up"
+       convolution_param {
+         kernel_size: 4
+         stride: 2
+         num_output: 2048
+         group: 2048
+         pad: 1
+         weight_filler {
+           type: "bilinear"
+         }
+         bias_term: false
+       }
+       param {
+         lr_mult: 0
+         decay_mult: 0
+       }
+}
+
+
+layer {
+	bottom: "res3d"
+	top: "res3d_down"
+	name: "res3d_down"
+	type: "Pooling"
+	pooling_param {
+		kernel_size: 3
+		stride: 2
+		pool: MAX
+	}
+}
+
+layer{
+  name: "hyper_conv"
+  type: "Concat"
+  bottom: "res5c_up"
+  bottom: "res4f"
+  bottom: "res3d_down"
+  top: "hyper_conv"
+}
+
+layer {
+	bottom: "hyper_conv"
+	top: "pool5"
+	name: "pool5"
+	type: "Pooling"
+	pooling_param {
+		kernel_size: 14
+		stride: 1
+		pool: AVE
+	}
+}
+
+
+layer {
+  name: "fc8_"
+  type: "InnerProduct"
+  bottom: "pool5"
+  top: "fc8_"
+  param {
+    lr_mult: 10
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 20
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 751
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "fc8_"
+  bottom: "label"
+  top: "loss"
+}
+
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "fc8_"
+  bottom: "label"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}

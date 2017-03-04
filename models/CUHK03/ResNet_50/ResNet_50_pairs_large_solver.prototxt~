@@ -1,0 +1,22 @@
+net: "models/market/ResNet_50/ResNet_50_pairs_large_train_val.prototxt"
+
+test_iter: 500
+test_interval: 5000
+#test_initialization: false
+display: 20
+average_loss: 20
+
+iter_size: 1
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 40000
+max_iter: 100000
+
+
+
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 40000
+snapshot_prefix: "output/market_train/IDE_ResNet_50_pairs_large_drop"
+solver_mode: GPU
