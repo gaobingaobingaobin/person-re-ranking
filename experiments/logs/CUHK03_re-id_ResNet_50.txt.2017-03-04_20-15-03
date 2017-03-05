@@ -1,0 +1,13 @@
+F0304 20:15:04.514936 23054 io.cpp:36] Check failed: fd != -1 (-1 vs. -1) File not found: models/CUHK03/ResNet_50/ResNet_50_IDE_detected_solver.prototxt
+*** Check failure stack trace: ***
+    @     0x7fa910ae8daa  (unknown)
+    @     0x7fa910ae8ce4  (unknown)
+    @     0x7fa910ae86e6  (unknown)
+    @     0x7fa910aeb687  (unknown)
+    @     0x7fa9112cfb7d  caffe::ReadProtoFromTextFile()
+    @     0x7fa9112c0b44  caffe::ReadSolverParamsFromTextFileOrDie()
+    @           0x408314  train()
+    @           0x405e9c  main
+    @     0x7fa90f343f45  (unknown)
+    @           0x4067a3  (unknown)
+    @              (nil)  (unknown)
