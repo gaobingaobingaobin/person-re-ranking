@@ -31,6 +31,7 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
   Please download Market-1501 dataset and unzip it in the "evaluation/data/Market-1501" folder. 
   Please download CUHK03 dataset and unzip it in the "evaluation/data/CUHK03" folder.
   ```
+  
 - [Pre-trained imagenet models](https://pan.baidu.com/s/1o7YZT8Y)
   
 - [Market-1501](https://pan.baidu.com/s/1ntIi2Op)
