@@ -3,7 +3,7 @@ clc;clear all;close all;
 % This code implements k-reciprocal re-ranking  %
 % on the CUHK03 dataset in multishot setting.   %
 % Please modify the path to your own folder.    %
-% We use the mAP and rank-1 rate as evaluation   %
+% We use the mAP and rank-1 rate as evaluation  %
 %***********************************************%
 % if you find this code useful in your research, please kindly cite our
 % paper as,
@@ -23,12 +23,16 @@ lambda = 0.3;
 %% network name
 netname = 'ResNet_50'; % network: CaffeNet  or ResNet_50 googlenet
 
-detected_or_labeled = 'labeled'; % detected/labeled
+detected_or_labeled = 'detected'; % detected/labeled
 load(['data/CUHK03/cuhk03_multishot_config_' detected_or_labeled '.mat']);
 
-%% load feature
-feat = importdata(['feat/CUHK03/ResNet_50_IDE_' detected_or_labeled '.mat']);
-feat = single(feat);
+%% load feature Deep feature
+feat = importdata(['feat/CUHK03/' netname '_IDE_' detected_or_labeled '.mat']);
+feat = double(feat);
+
+%% load feature LOMO feature
+% feat = importdata(['feat/CUHK03/cuhk03_' detected_or_labeled '_lomo.mat']);
+% feat = single(feat.descriptors);
 %% train info
 label_train = labels(train_idx);
 cam_train = camId(train_idx);

@@ -19,10 +19,10 @@ layer {
     source: "evaluation/data/CUHK03/train_cuhk03_labeled.txt" 
     root_folder: "evaluation/data/CUHK03/"  
     shuffle: true
-    new_height: 256  
-    new_width: 256  
+    new_height: 224  
+    new_width: 224  
     is_color: true  
-    batch_size: 32
+    batch_size: 16
   }
 }
 
@@ -2338,15 +2338,15 @@ layer {
   bottom: "pool5"
   top: "fc8_"
   param {
-    lr_mult: 10
+    lr_mult: 1
     decay_mult: 1
   }
   param {
-    lr_mult: 20
+    lr_mult: 2
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 730
+    num_output: 767
     weight_filler {
       type: "gaussian"
       std: 0.001

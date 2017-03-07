@@ -3,8 +3,8 @@ clc;clear all;close all;
 seed = 0;
 rng(seed);
 
-train_ID_num = 730;
-test_ID_num = 737;
+train_ID_num = 767;
+test_ID_num = 700;
 
 detected_or_labeled = 'detected'; % detected or labeled
 

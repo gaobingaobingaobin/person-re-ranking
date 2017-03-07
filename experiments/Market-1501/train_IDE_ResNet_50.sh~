@@ -14,4 +14,4 @@ mkdir -p experiments/logs/
 
 GLOG_logtostderr=1 ${CAFFE}/build/tools/caffe train \
   -solver models/${DATASET}/${NET}/${NET}_IDE_solver.prototxt \
-  -weights data/imagenet_models/${NET}.caffemodel  2>&1 | tee ${LOG}
+  -weights data/imagenet_models//${NET}.caffemodel  2>&1 | tee ${LOG}

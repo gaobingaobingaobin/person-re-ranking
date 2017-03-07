@@ -1,6 +1,6 @@
 clear;
 
-detected_or_labeled = 2;
+detected_or_labeled = 1;
 
 if detected_or_labeled == 1
     load('cuhk03_multishot_config_detected.mat');

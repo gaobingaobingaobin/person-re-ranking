@@ -8,9 +8,8 @@ caffe.set_mode_gpu();
 netname = 'ResNet_50'; % network: CaffeNet  or ResNet_50 or googlenet
 
 % set your path to the prototxt and model
-model =  ['../models/market/' netname '/' netname '_test.prototxt'];
-weights = ['../output/market_train/IDE_' netname '_ide_multihardloss_1_1_1_iter_180000.caffemodel']; 
-%weights = ['data/imagenet_models/' netname '.caffemodel']'
+model =  ['../models/Market-1501/' netname '/' netname '_test.prototxt'];
+weights = ['../output/Market-1501_train/' netname '_IDE_iter_50000.caffemodel']; 
 net = caffe.Net(model, weights, 'test');
 
 if strcmp(netname, 'ResNet_50')
@@ -30,11 +29,11 @@ image_mean = mean_data;
 off = floor((size(image_mean,1) - im_size)/2)+1;
 image_mean = image_mean(off:off+im_size-1, off:off+im_size-1, :);
 
-ef_path = {'dataset/bounding_box_train/', 'dataset/bounding_box_test/', 'dataset/query/'};
+ef_path = {'data/Market-1501/bounding_box_train/', 'data/Market-1501/bounding_box_test/', 'data/Market-1501/query/'};
 ef_name = {'train', 'test', 'query'};
 
-if ~exist('feat') 
-    mkdir('feat')    
+if ~exist('feat/Market-1501/') 
+    mkdir('featMarket-1501/')    
 end
 
 % extract features
@@ -54,7 +53,7 @@ for i = 1:3
         feat(:, n) = single(feat_img{1}(:));
     end
     
-    save(['feat/IDE_'  netname  '_ide_multihardloss_1_1_1_' ef_name{i} '.mat'], 'feat');
+    save(['feat/Market-1501/'  netname  '_IDE_' ef_name{i} '.mat'], 'feat');
     feat = [];
 end
 

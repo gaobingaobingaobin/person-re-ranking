@@ -6,8 +6,8 @@ average_loss: 20
 base_lr: 0.001
 lr_policy: "step"
 gamma: 0.1
-stepsize: 10000
-max_iter: 20000
+stepsize: 15000
+max_iter: 75000
 
 momentum: 0.9
 weight_decay: 0.0005

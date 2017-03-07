@@ -6,11 +6,11 @@ addpath(genpath('utils/'));
 caffe.set_device(0);
 caffe.set_mode_gpu();
 netname = 'ResNet_50'; % network: CaffeNet  or ResNet_50 or googlenet
-detected_or_labeled = 'labeled'; %detected or labeled
+detected_or_labeled = 'detected'; %detected or labeled
 
 % set your path to the prototxt and model
 model =  ['../models/CUHK03/' netname '/' netname '_test.prototxt'];
-weights = ['../output/CUHK03_train/' netname '_IDE_' detected_or_labeled '_iter_20000.caffemodel'];
+weights = ['../output/CUHK03_train/' netname '_IDE_' detected_or_labeled '_iter_75000.caffemodel'];
 net = caffe.Net(model, weights, 'test');
 
 if strcmp(netname, 'ResNet_50')
@@ -18,7 +18,7 @@ if strcmp(netname, 'ResNet_50')
     feat_dim = 2048;
 elseif strcmp(netname, 'CaffeNet')
     im_size = 227;
-    feat_dim = 4096;
+    feat_dim = 1024;
 else
     im_size = 227;
     feat_dim = 1024;
@@ -32,8 +32,8 @@ image_mean = image_mean(off:off+im_size-1, off:off+im_size-1, :);
 
 ef_path = {['data/CUHK03/cuhk03_' detected_or_labeled '/']};
 
-if ~exist('feat')
-    mkdir('feat')
+if ~exist('feat/CUHK03/')
+    mkdir('feat/CUHK03/')
 end
 
 % extract features
