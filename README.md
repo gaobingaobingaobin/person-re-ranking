@@ -1,6 +1,6 @@
 # Re-ranking Person Re-identification with k-reciprocal Encoding 
 =============
-This code was used for experiments for the paper "Re-ranking Person Re-identification with k-reciprocal Encoding".
+This code has the source code for the paper "Re-ranking Person Re-identification with k-reciprocal Encoding".
 
 If you find this code useful in your research, please consider citing:
 
