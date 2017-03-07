@@ -87,7 +87,19 @@ Using the above IDE models and IDE features, you can reproduce the results with 
 |IDE_ResNet_50  + XQDA      | 77.58% | 56.06%|
 |IDE_ResNet_50  + XQDA +re-ranking     | 80.70% | 69.98%|
 
-- CUHK03-Labeled
+- CUHK03
+
+| |  Labeled | Labeled|  detected | detected|
+| -------| -----  | ----  |----  |----  |
+|Methods |  Rank@1 | mAP|  Rank@1 | mAP|
+|IDE_CaffeNet  + Euclidean | 15.6% | 14.9%|  15.1% | 14.2%|
+|IDE_CaffeNet  + Euclidean + re-ranking | 19.1% | 21.3%|19.3% | 20.6%|
+|IDE_CaffeNet  + XQDA      | 21.9% | 20.0%|21.1% | 19.0%|
+|IDE_CaffeNet  + XQDA +re-ranking     | 25.9% | 27.8%|26.4% | 26.9%|
+|IDE_ResNet_50  + Euclidean | 22.2% | 21.0%|21.3% | 19.7%|
+|IDE_ResNet_50  + Euclidean + re-ranking | 26.6% | 28.9%|24.9% | 27.3%|
+|IDE_ResNet_50  + XQDA      | 32.0% | 29.6%|31.1% | 28.2%|
+|IDE_ResNet_50  + XQDA +re-ranking     | 38.1% | 40.3%|34.7% | 37.4%|
 
 |Methods |   Rank@1 | mAP|
 | --------   | -----  | ----  |
