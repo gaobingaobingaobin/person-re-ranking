@@ -38,7 +38,7 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
 
 - [CUHK03](https://pan.baidu.com/----)
 
-### Training and testing IDE model with our re-ranking method
+### Training IDE model and testing  with our re-ranking method
 
 1. Training 
   ```Shell
