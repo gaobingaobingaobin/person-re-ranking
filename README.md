@@ -58,10 +58,9 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
   
   # extract feature for CUHK03
   matlab CUHK03_extract_feature.m
-  # The IDE features are saved under: "market_evaluation/feat"
   ```
   
-3. Evaluation
+3. Evaluation with our re-ranking method
   ```Shell
     # evaluation for Market-1501
     matlab Market_1501_evaluation.m
@@ -71,13 +70,48 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
   ``` 
   
 ### Results
-You can download our pre-trained IDE models and IDE features, and put them in the "out_put/"  and "evaluation/feat" folder, respectively. 
+You can download our pre-trained IDE models and IDE features, and put them in the "out_put"  and "evaluation/feat" folder, respectively. 
 
 - [IDE models](https://pan.baidu.com/123) 
 
 - [IDE features](https://pan.baidu.com/123)
 
-Using the above models and features with our re-ranking method, you can reproduce the results as follows:
+Using the above IDE models and IDE features, you can reproduce the results with our re-ranking as follows:
+
+- Market-1501
+
+|Methods |   Rank@1 | mAP|
+| --------   | -----  | ----  |
+|IDE_ResNet_50  + Euclidean | 78.92% | 55.03%|
+|IDE_ResNet_50  + Euclidean + re-ranking | 78.92% | 55.03%|
+|IDE_ResNet_50  + XQDA      | 77.35% | 56.01%|
+|IDE_ResNet_50  + XQDA +re-ranking     | 77.35% | 56.01%|
+
+- CUHK03-Labeled
+
+|Methods |   Rank@1 | mAP|
+| --------   | -----  | ----  |
+|IDE_ResNet_50  + Euclidean | 78.92% | 55.03%|
+|IDE_ResNet_50  + Euclidean + re-ranking | 78.92% | 55.03%|
+|IDE_ResNet_50  + XQDA      | 77.35% | 56.01%|
+|IDE_ResNet_50  + XQDA +re-ranking     | 77.35% | 56.01%|
+|IDE_ResNet_50  + Euclidean | 78.92% | 55.03%|
+|IDE_ResNet_50  + Euclidean + re-ranking | 78.92% | 55.03%|
+|IDE_ResNet_50  + XQDA      | 77.35% | 56.01%|
+|IDE_ResNet_50  + XQDA +re-ranking     | 77.35% | 56.01%|
+
+- CUHK03-Detected
+
+|Methods |   Rank@1 | mAP|
+| --------   | -----  | ----  |
+|IDE_ResNet_50  + Euclidean | 78.92% | 55.03%|
+|IDE_ResNet_50  + Euclidean + re-ranking | 78.92% | 55.03%|
+|IDE_ResNet_50  + XQDA      | 77.35% | 56.01%|
+|IDE_ResNet_50  + XQDA +re-ranking     | 77.35% | 56.01%|
+|IDE_ResNet_50  + Euclidean | 78.92% | 55.03%|
+|IDE_ResNet_50  + Euclidean + re-ranking | 78.92% | 55.03%|
+|IDE_ResNet_50  + XQDA      | 77.35% | 56.01%|
+|IDE_ResNet_50  + XQDA +re-ranking     | 77.35% | 56.01%|
 
 
 ### Contact us
