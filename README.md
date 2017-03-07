@@ -24,6 +24,7 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
     # http://caffe.berkeleyvision.org/installation.html
     make -j8 && make matcaffe
     ```
+    
 2. Download pre-computed imagenet models, Market-1501 dataset and CUHK03 dataset
   ```Shell
   Please download the pre-trained imagenet models and put it in the "data/imagenet_models" folder.
