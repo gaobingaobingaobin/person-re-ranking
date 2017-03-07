@@ -66,7 +66,8 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
     
     # evaluation for CUHK03
     matlab CUHK03_evaluation.m
-  ```  
+  ``` 
+  
 ### Results
 You can download our pre-trained IDE models and IDE features, and put them in the "out_put/"  and "evaluation/feat" folder, respectively. 
 
