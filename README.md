@@ -110,7 +110,4 @@ If you have any questions about this code, please do not hesitate to contact us.
 [Zhun Zhong](http://zhunzhong.site)
 
 [Liang Zheng](http://liangzheng.com.cn)
-<<<<<<< HEAD
 
-=======
->>>>>>> 6b9b83f0d5950d46eb1164fa8287f89d5a2b0de4
