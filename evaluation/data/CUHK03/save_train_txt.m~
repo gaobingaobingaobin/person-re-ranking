@@ -3,11 +3,11 @@ clear;
 detected_or_labeled = 1;
 
 if detected_or_labeled == 1
-    load('cuhk03_new_protocol_config_detected.mat');
+    load('cuhk03_multishot_config_detected.mat');
     file_path = 'cuhk03_detected/';
     savepath  = 'train_cuhk03_detected';
 else
-    load('cuhk03_new_protocol_config_labeled.mat');
+    load('cuhk03_multishot_config_labeled.mat');
     file_path = 'cuhk03_labeled/';
     savepath  = 'train_cuhk03_labeled';
 end

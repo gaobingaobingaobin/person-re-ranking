@@ -24,7 +24,7 @@ lambda = 0.3;
 netname = 'ResNet_50'; % network: CaffeNet  or ResNet_50 googlenet
 
 detected_or_labeled = 'detected'; % detected/labeled
-load(['data/CUHK03/cuhk03_new_protocol_config_' detected_or_labeled '.mat']);
+load(['data/CUHK03/cuhk03_multishot_config_' detected_or_labeled '.mat']);
 
 %% load feature Deep feature
 feat = importdata(['feat/CUHK03/' netname '_IDE_' detected_or_labeled '.mat']);
