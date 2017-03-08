@@ -1,0 +1,3 @@
+*.sh linguist-language=Matlab
+*.c linguist-language=Matlab
+*.c++ linguist-language=Matlab
