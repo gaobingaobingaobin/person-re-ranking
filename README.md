@@ -38,6 +38,10 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
 
 - [CUHK03](https://pan.baidu.com/s/1o8txURK)
 
+#### The new training/testing protocol split for CUHK03 in our paper is in the "evaluation/data/CUHK03/"
+- cuhk03_new_protocol_config_detected.mat
+- cuhk03_new_protocol_config_labeled.mat
+
 ### Training IDE model and testing  with our re-ranking method
 
 1. Training 
