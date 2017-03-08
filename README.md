@@ -36,7 +36,7 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
   
 - [Market-1501](https://pan.baidu.com/s/1ntIi2Op)
 
-- [CUHK03](https://pan.baidu.com/----)
+- [CUHK03](https://pan.baidu.com/s/1o8txURK)
 
 ### Training IDE model and testing  with our re-ranking method
 
@@ -72,9 +72,9 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
 ### Results
 You can download our pre-trained IDE models and IDE features, and put them in the "out_put"  and "evaluation/feat" folder, respectively. 
 
-- [IDE models](https://pan.baidu.com/123) 
+- [IDE models](https://pan.baidu.com/s/1jHVj2C2) 
 
-- [IDE features](https://pan.baidu.com/123)
+- [IDE features](https://pan.baidu.com/s/1c1TtKcw)
 
 Using the above IDE models and IDE features, you can reproduce the results with our re-ranking as follows:
 
