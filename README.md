@@ -36,7 +36,7 @@ Requirements for `Caffe` and `matcaffe` (see: [Caffe installation instructions](
   
 - [Market-1501](https://pan.baidu.com/s/1ntIi2Op)
 
-- CUHK03 [Baiduyun](https://pan.baidu.com/s/1o8txURK) [Google drive](https://drive.google.com/open?id=0B7TOZKXmIjU3OUhfd3BPaVRHZVE)
+- CUHK03 [[Baiduyun]](https://pan.baidu.com/s/1o8txURK) [[Google drive]](https://drive.google.com/open?id=0B7TOZKXmIjU3OUhfd3BPaVRHZVE)
 
 ### The new training/testing protocol for CUHK03
 The new training/testing protocol split for CUHK03 in our paper is in the "evaluation/data/CUHK03/" folder.
@@ -77,9 +77,9 @@ The new training/testing protocol split for CUHK03 in our paper is in the "evalu
 ### Results
 You can download our pre-trained IDE models and IDE features, and put them in the "out_put"  and "evaluation/feat" folder, respectively. 
 
-- IDE models [Baiduyun](https://pan.baidu.com/s/1jHVj2C2) [Google drive](https://drive.google.com/open?id=0B7TOZKXmIjU3ZTNsWGt3azcxUUU)
+- IDE models [[Baiduyun]](https://pan.baidu.com/s/1jHVj2C2) [[Google drive]](https://drive.google.com/open?id=0B7TOZKXmIjU3ZTNsWGt3azcxUUU)
 
-- IDE features [Baiduyun](https://pan.baidu.com/s/1c1TtKcw) [Google drive](https://drive.google.com/open?id=0B7TOZKXmIjU3ODhaRm8yN2QzRHc)
+- IDE features [[Baiduyun]](https://pan.baidu.com/s/1c1TtKcw) [[Google drive]](https://drive.google.com/open?id=0B7TOZKXmIjU3ODhaRm8yN2QzRHc)
 
 Using the above IDE models and IDE features, you can reproduce the results with our re-ranking method as follows:
 
